@@ -1,0 +1,44 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "number",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "customerName",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "customerMobile",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "roomNumber",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "period",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "amount",
+            "fieldType": "Double"
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "createdDate",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20160330062056",
+    "dto": "no",
+    "service": "serviceClass",
+    "pagination": "infinite-scroll"
+}

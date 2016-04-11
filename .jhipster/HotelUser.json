@@ -1,0 +1,39 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "password",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "auth",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "number",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "dateIn",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "sex",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160322131948",
+    "dto": "no",
+    "service": "serviceClass",
+    "pagination": "infinite-scroll"
+}

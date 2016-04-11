@@ -1,0 +1,68 @@
+<div>
+    <h2 translate="hotelmanageApp.hotelOrder.home.title">HotelOrders</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="hotelOrder.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+                        translate="hotelmanageApp.hotelOrder.home.createLabel">Create new HotelOrder
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="predicate" ascending="reverse" callback="reset()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="number"><span translate="hotelmanageApp.hotelOrder.number">Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="customerName"><span translate="hotelmanageApp.hotelOrder.customerName">CustomerName</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="customerMobile"><span translate="hotelmanageApp.hotelOrder.customerMobile">CustomerMobile</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="roomNumber"><span translate="hotelmanageApp.hotelOrder.roomNumber">RoomNumber</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="period"><span translate="hotelmanageApp.hotelOrder.period">Period</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="amount"><span translate="hotelmanageApp.hotelOrder.amount">Amount</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createdDate"><span translate="hotelmanageApp.hotelOrder.createdDate">CreatedDate</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll="loadPage(page + 1)" infinite-scroll-disabled="links['last'] == page">
+                <tr ng-repeat="hotelOrder in hotelOrders track by hotelOrder.id">
+                    <td><a ui-sref="hotelOrder.detail({id:hotelOrder.id})">{{hotelOrder.id}}</a></td>
+                    <td>{{hotelOrder.number}}</td>
+                    <td>{{hotelOrder.customerName}}</td>
+                    <td>{{hotelOrder.customerMobile}}</td>
+                    <td>{{hotelOrder.roomNumber}}</td>
+                    <td>{{hotelOrder.period}}</td>
+                    <td>{{hotelOrder.amount}}</td>
+                        <td>{{hotelOrder.createdDate | date:'mediumDate'}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="hotelOrder.detail({id:hotelOrder.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="hotelOrder.edit({id:hotelOrder.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="hotelOrder.delete({id:hotelOrder.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

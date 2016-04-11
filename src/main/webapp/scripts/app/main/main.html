@@ -1,0 +1,38 @@
+<!--
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Modern Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+ &lt;!&ndash; Bootstrap Core CSS &ndash;&gt;
+<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+&lt;!&ndash; Custom CSS &ndash;&gt;
+<link href="../../../css/style.css" rel='stylesheet' type='text/css' />
+<link href="../../../css/font-awesome.css" rel="stylesheet">
+&lt;!&ndash; jQuery &ndash;&gt;
+<script src="../../../js/jquery.min.js"></script>
+&lt;!&ndash;&#45;&#45;webfonts-&ndash;&gt;
+<link href='http://fonts.useso.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+&lt;!&ndash;-//webfonts-&ndash;&gt;
+&lt;!&ndash; Bootstrap Core JavaScript &ndash;&gt;
+<script src="../../../js/bootstrap.min.js"></script>
+-->
+</head>
+<div id="login"  style="background-image: url('../../../images/bg.jpg');">
+  <div class="login-logo">
+    <a href="index.html"><img src="" alt=""/></a>
+  </div>
+  <h1 class="form-heading" align="center" style="font-weight: bold;color: #3949ab">系统登录</h1>
+  <div class="app-cam">
+	  <form name="loginForm" ng-submit="loginUser()">
+		<input type="text" class="text" value="员工号" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '员工号';}" ng-model="number" name="number" ng-click="error.userError=null;error.passwordError=null" /><div ng-show="error" style="color: red; ">{{error.userError}}</div>
+		<input type="password" value="密码" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '密码';}" ng-model="password" name="password" ng-click="error.userError=null;error.passwordError=null" /> <div ng-show="error" style="color: red; ">{{error.passwordError}}</div>
+		<div class="submit"><input type="submit"  value="登录"></div>
+	</form>
+  </div>
+    <br><br>
+   <div class="copy_layout login">
+       <p>Copyright &copy; 2015.TianPu Hotel All rights reserved.</p>
+   </div>
+    <br><br>
+</div>

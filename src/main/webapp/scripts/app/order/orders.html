@@ -1,0 +1,171 @@
+<style type="text/css">
+    tr:hover{
+        background-color: #99cfe7;
+    }
+</style>
+<div id="wrapper">
+    <!-- Navigation -->
+    <nav class="top1 navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">天浦大酒店管理</a>
+        </div>
+        <!-- /.navbar-header -->
+        <ul class="nav navbar-nav navbar-right" ng-click="setFlag=!setFlag">
+            <li class="dropdown">
+                <a class="dropdown-toggle avatar" data-toggle="dropdown"><img src="images/1.png"></a>
+                <ul class="dropdown-menu" ng-show="setFlag">
+                    <li class="m_2"><i class="fa fa-bell-o"></i> 欢迎您：<span style="color: mediumvioletred;margin-left: 10px">{{name}}</span></li>
+                    <li class="m_2" ng-click="loginOut()"><i class="fa fa-lock"></i> 退出登录</li>
+                </ul>
+            </li>
+        </ul>
+        <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" value="请输入关键字." onfocus="this.value = '';"
+                   onblur="if (this.value == '') {this.value = '请输入关键字.';}">
+        </form>
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse" style=" height: 580px">
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <a  ng-click="goToHtml('dashbord')"><i class="fa fa-dashboard fa-fw nav_icon"></i>主页</a>                    </li>
+                    <li>
+                        <a ng-click="changeFlag1()"><i class="fa fa-indent nav_icon"></i>房间管理<span class="fa arrow"  ng-show="!flag1"></span></a>
+                        <ul class="nav nav-second-level" ng-show="flag1">
+                            <li>
+                                <a ng-click="goToHtml('rooms')">所有房间</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a ng-click="changeFlag2()"><i class="fa fa-envelope nav_icon"></i>所有订单<span class="fa arrow" ng-show="!flag2"></span></a>
+                        <ul class="nav nav-second-level" ng-show="flag2">
+                            <li>
+                                <a ng-click="goToHtml('orders')">订单查看</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li ng-show="auth == 1">
+                        <a ng-click="goToHtml('report')"><i class="fa fa-flask nav_icon"></i>营业查询</a>
+                    </li>
+                    <li ng-show="auth == 1">
+                        <a ng-click="changeFlag3()"><i class="fa fa-check-square-o nav_icon"></i>员工管理<span class="fa arrow" ng-show="!flag3"></span></a>
+                        <ul class="nav nav-second-level" ng-show="flag3">
+                            <li>
+                                <a ng-click="goToHtml('users')">查看员工</a>
+                            </li>
+                            <li>
+                                <a ng-click="goToHtml('add_user')">新增员工</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+
+
+                    <li>
+                        <a ><i class=""></i><span class=" "></span></a>
+
+                        <!-- /.nav-second-level -->
+                    </li>
+
+                    <li>
+                        <a><i class=""></i><span class=" "></span></a>
+
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a><i class=""></i><span class=" "></span></a>
+
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a ><i class=""></i><span class=" "></span></a>
+
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a ><i class=""></i><span class=" "></span></a>
+
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a ><i class=""></i><span class=" "></span></a>
+
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a ><i class=""></i><span class=" "></span></a>
+
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a ><i class=""></i><span class=" "></span></a>
+
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a ><i class=""></i><span class=" "></span></a>
+
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a ><i class=""></i><span class=" "></span></a>
+
+                        <!-- /.nav-second-level -->
+                    </li>
+
+
+                </ul>
+            </div>
+            <!-- /.sidebar-collapse -->
+        </div>
+        <!-- /.navbar-static-side -->
+    </nav>
+    <div id="page-wrapper">
+        <div class="col-md-12 graphs">
+            <div class="xs">
+                <h3>所有订单</h3>
+                <div class="panel panel-warning" data-widget="{&quot;draggable&quot;: &quot;false&quot;}" data-widget-static="">
+                    <div class="panel-body no-padding">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr class="warning">
+                                <th>订单编号</th>
+                                <th>客户姓名</th>
+                                <th>客户手机号码</th>
+                                <th>预订房间</th>
+                                <th>预订天数</th>
+                                <th>订单金额</th>
+                                <th>创建日期</th>
+                            </tr>
+                            </thead>
+                            <tbody ng-repeat="order in orders ">
+                            <tr>
+                                <td>{{order.number}}</td>
+                                <td>{{order.customerName}}</td>
+                                <td>{{order.customerMobile}}</td>
+                                <td>{{order.roomNumber}}</td>
+                                <td>{{order.period}}</td>
+                                <td>{{order.amount}}</td>
+                                <td>{{order.createdDate}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div class="copy_layout">
+                <p>Copyright &copy; 2015.TianPu Hotel All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-wrapper -->
+</div>

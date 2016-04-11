@@ -1,0 +1,70 @@
+
+<div>
+    <h2><span translate="hotelmanageApp.hotelUser.detail.title">HotelUser</span> {{hotelUser.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="hotelmanageApp.hotelUser.name">Name</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{hotelUser.name}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="hotelmanageApp.hotelUser.password">Password</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{hotelUser.password}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="hotelmanageApp.hotelUser.auth">Auth</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{hotelUser.auth}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="hotelmanageApp.hotelUser.number">Number</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{hotelUser.number}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="hotelmanageApp.hotelUser.dateIn">DateIn</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{hotelUser.dateIn | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="hotelmanageApp.hotelUser.sex">Sex</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{hotelUser.sex}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

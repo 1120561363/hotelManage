@@ -1,0 +1,66 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myHotelUserLabel" translate="hotelmanageApp.hotelUser.home.createOrEditLabel">Create or edit a HotelUser</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="hotelUser.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="hotelmanageApp.hotelUser.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="hotelUser.name"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="hotelmanageApp.hotelUser.password" for="field_password">Password</label>
+            <input type="text" class="form-control" name="password" id="field_password"
+                    ng-model="hotelUser.password"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="hotelmanageApp.hotelUser.auth" for="field_auth">Auth</label>
+            <input type="number" class="form-control" name="auth" id="field_auth"
+                    ng-model="hotelUser.auth"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="hotelmanageApp.hotelUser.number" for="field_number">Number</label>
+            <input type="text" class="form-control" name="number" id="field_number"
+                    ng-model="hotelUser.number"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="hotelmanageApp.hotelUser.dateIn" for="field_dateIn">DateIn</label>
+                <div class="input-group">
+                    <input id="field_dateIn" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="hotelUser.dateIn" is-open="datePickerForDateIn.status.opened"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="datePickerForDateInOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="hotelmanageApp.hotelUser.sex" for="field_sex">Sex</label>
+            <input type="text" class="form-control" name="sex" id="field_sex"
+                    ng-model="hotelUser.sex"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

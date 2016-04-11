@@ -1,0 +1,66 @@
+<div>
+    <h2 translate="hotelmanageApp.hotelUser.home.title">HotelUsers</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="hotelUser.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+                        translate="hotelmanageApp.hotelUser.home.createLabel">Create new HotelUser
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="predicate" ascending="reverse" callback="reset()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="name"><span translate="hotelmanageApp.hotelUser.name">Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="password"><span translate="hotelmanageApp.hotelUser.password">Password</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="auth"><span translate="hotelmanageApp.hotelUser.auth">Auth</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="number"><span translate="hotelmanageApp.hotelUser.number">Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="dateIn"><span translate="hotelmanageApp.hotelUser.dateIn">DateIn</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="sex"><span translate="hotelmanageApp.hotelUser.sex">Sex</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll="loadPage(page + 1)" infinite-scroll-disabled="links['last'] == page">
+                <tr ng-repeat="hotelUser in hotelUsers track by hotelUser.id">
+                    <td><a ui-sref="hotelUser.detail({id:hotelUser.id})">{{hotelUser.id}}</a></td>
+                    <td>{{hotelUser.name}}</td>
+                    <td>{{hotelUser.password}}</td>
+                    <td>{{hotelUser.auth}}</td>
+                    <td>{{hotelUser.number}}</td>
+                        <td>{{hotelUser.dateIn | date:'mediumDate'}}</td>
+                    <td>{{hotelUser.sex}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="hotelUser.detail({id:hotelUser.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="hotelUser.edit({id:hotelUser.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="hotelUser.delete({id:hotelUser.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

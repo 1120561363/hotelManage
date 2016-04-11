@@ -1,0 +1,29 @@
+{
+    "hotelmanageApp": {
+        "hotelOrder" : {
+            "home": {
+                "title": "HotelOrders",
+                "createLabel": "Créer un nouveau HotelOrder",
+                "createOrEditLabel": "Créer ou éditer un HotelOrder",
+                "search": "Search for HotelOrder"
+            },
+            "created": "Un nouveau HotelOrder a été créé avec l'identifiant {{ param }}",
+            "updated": "Le HotelOrder avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le HotelOrder avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le HotelOrder {{ id }} ?"
+            },
+            "detail": {
+                "title": "HotelOrder"
+            },
+            "number": "Number",
+            "customerName": "CustomerName",
+            "customerMobile": "CustomerMobile",
+            "roomNumber": "RoomNumber",
+            "period": "Period",
+            "amount": "Amount",
+            "createdDate": "CreatedDate"
+        }
+    }
+}
+

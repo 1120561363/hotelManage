@@ -1,0 +1,78 @@
+
+<div>
+    <h2><span translate="hotelmanageApp.hotelOrder.detail.title">HotelOrder</span> {{hotelOrder.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="hotelmanageApp.hotelOrder.number">Number</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{hotelOrder.number}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="hotelmanageApp.hotelOrder.customerName">CustomerName</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{hotelOrder.customerName}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="hotelmanageApp.hotelOrder.customerMobile">CustomerMobile</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{hotelOrder.customerMobile}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="hotelmanageApp.hotelOrder.roomNumber">RoomNumber</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{hotelOrder.roomNumber}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="hotelmanageApp.hotelOrder.period">Period</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{hotelOrder.period}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="hotelmanageApp.hotelOrder.amount">Amount</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{hotelOrder.amount}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="hotelmanageApp.hotelOrder.createdDate">CreatedDate</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{hotelOrder.createdDate | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,27 @@
+{
+    "hotelmanageApp": {
+        "hotelUser" : {
+            "home": {
+                "title": "HotelUsers",
+                "createLabel": "Create a new HotelUser",
+                "createOrEditLabel": "Create or edit a HotelUser",
+                "search": "Search for HotelUser"
+            },
+            "created": "A new HotelUser is created with identifier {{ param }}",
+            "updated": "A HotelUser is updated with identifier {{ param }}",
+            "deleted": "A HotelUser is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete HotelUser {{ id }}?"
+            },
+            "detail": {
+                "title": "HotelUser"
+            },
+            "name": "Name",
+            "password": "Password",
+            "auth": "Auth",
+            "number": "Number",
+            "dateIn": "DateIn",
+            "sex": "Sex"
+        }
+    }
+}
