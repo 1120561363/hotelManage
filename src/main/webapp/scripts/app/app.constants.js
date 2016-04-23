@@ -3,7 +3,7 @@
 angular.module('hotelmanageApp')
 
     .constant('ENV', 'dev')
-    .constant("ServiceBaseURL", "http://10.6.0.12:8080")
+    .constant("ServiceBaseURL", "http://127.0.0.1:8080")
 
     .constant('VERSION', '0.0.1-SNAPSHOT')
 

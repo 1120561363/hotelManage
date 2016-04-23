@@ -1,5 +1,5 @@
 <style type="text/css">
-    tr:hover{
+    .ttt:hover{
         background-color: #99cfe7;
     }
 </style>
@@ -30,7 +30,7 @@
                    onblur="if (this.value == '') {this.value = '请输入关键字.';}">
         </form>
         <div class="navbar-default sidebar" role="navigation">
-            <div class="sidebar-nav navbar-collapse" style=" height: 580px">
+            <div class="sidebar-nav navbar-collapse" style=" height: 1080px">
                 <ul class="nav" id="side-menu">
                     <li>
                         <a  ng-click="goToHtml('dashbord')"><i class="fa fa-dashboard fa-fw nav_icon"></i>主页</a>                    </li>
@@ -147,7 +147,7 @@
                             </tr>
                             </thead>
                             <tbody ng-repeat="order in orders ">
-                            <tr>
+                            <tr class="ttt">
                                 <td>{{order.number}}</td>
                                 <td>{{order.customerName}}</td>
                                 <td>{{order.customerMobile}}</td>

@@ -81,10 +81,11 @@ angular.module('hotelmanageApp')
                     url:ServiceBaseURL+ '/api/users',
                     data: {
                         'page': 0,
-                        'size': 7
+                        'size': 5
                     }
                 }).success(function (data) {
                     $scope.result = data;
+                    console.log(data);
                     for(var i=0;i<$scope.result.length;i++){
                         var rs = $scope.result[i] ;
                         var user = {
